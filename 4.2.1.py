@@ -1,15 +1,15 @@
-"""def strcounter(s):
-    for sym in set(s) :
-        counter = 0
-        for sub_sym in s:
-            if sym == sub_sym:
-                counter += 1
-        print(sym, counter)
-strcounter('abcdaa')"""
+def palindrome(s):
+    if len(s) < 1:
+        return True
+    else:
+        if s[0] == s[-1]:
+            return is_palindrome(s[1:-1])
+        else:
+            return False
 
 
-def strcounter(s):
-    syms_counter = {}
-    for sym in s:
-        syms_counter[sym] = syms_counter.get(sym, 0) + 1
-print('Излачлоаи')
+a = str(input("Введите строку:"))
+if palindrome(a) == True:
+    print("True")
+else:
+    print("False")
