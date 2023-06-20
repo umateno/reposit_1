@@ -3,7 +3,7 @@ def palindrome(s):
         return True
     else:
         if s[0] == s[-1]:
-            return is_palindrome(s[1:-1])
+            return palindrome(s[1:-1])
         else:
             return False
 
